@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Ultimate Guide to GATE CSE Test Series</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-node {
+            border: 2px solid;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            position: relative;
+        }
+        .flowchart-arrow {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #4a5568;
+            z-index: -1;
+        }
+        .flowchart-arrow::after {
+            content: '▼';
+            position: absolute;
+            font-size: 1.25rem;
+            color: #4a5568;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flowchart-horizontal-line {
+            height: 2px;
+            background-color: #4a5568;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003d5b] mb-4">Navigating the GATE CSE Test Series Maze</h1>
+            <p class="text-xl md:text-2xl text-gray-600">A Visual Guide to the Optimal Hybrid Strategy for Top Ranks</p>
+        </header>
+
+        <section class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#00A6ED]">
+                    <p class="text-5xl font-extrabold text-[#00A6ED]">4500+</p>
+                    <h3 class="text-xl font-semibold mt-2">Free Questions</h3>
+                    <p class="text-gray-500">GeeksforGeeks offers a massive bank of free PYQs and practice questions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#7FB800]">
+                    <p class="text-5xl font-extrabold text-[#7FB800]">#1</p>
+                    <h3 class="text-xl font-semibold mt-2">For Rank Prediction</h3>
+                    <p class="text-gray-500">MADE EASY's huge user base provides the most realistic All-India Rank.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#F6511D]">
+                    <p class="text-5xl font-extrabold text-[#F6511D]">Gold Standard</p>
+                    <h3 class="text-xl font-semibold mt-2">For Conceptual Depth</h3>
+                    <p class="text-gray-500">GO Classes is renowned for its tough, high-quality, concept-building questions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#003d5b]">The PYQ Imperative: Why Past Papers Matter</h2>
+            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">Practicing with Previous Year Questions (PYQs) in a timed, test-like environment is no longer just a trend—it's a cornerstone of modern GATE preparation. It hones exam temperament, builds time management skills, and familiarizes aspirants with the exact patterns and question styles of the actual exam.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-[#003d5b]">PYQ-Integrated Test Series Landscape</h3>
+                    <p class="text-gray-600 mb-4">Several platforms now offer dedicated PYQ tests. This chart compares the approximate number of PYQ-specific quizzes or full-length mock tests offered by leading providers, highlighting the extensive free resources available.</p>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="pyqTestsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-[#003d5b]">The Evolution of Preparation</h3>
+                     <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-2xl font-bold text-[#00A6ED] mr-4">1.</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">PDF Downloads</h4>
+                                <p class="text-gray-600">Initial strategies focused on simple access to static PYQ papers.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl font-bold text-[#FFB400] mr-4">2.</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Mock Test Emergence</h4>
+                                <p class="text-gray-600">Focus shifted to original mock tests for time management and simulating exam pressure.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl font-bold text-[#F6511D] mr-4">3.</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Integrated PYQ Simulation</h4>
+                                <p class="text-gray-600">The current demand synthesizes both needs: practicing with actual past papers in a timed, interactive test environment.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#003d5b]">The Premier League of Mock Tests</h2>
+            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">Beyond PYQs, success hinges on tackling high-quality, unseen questions. We compare the top-tier providers of original mock tests across key qualitative dimensions. Each has a unique philosophy, catering to different aspirant needs.</p>
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+                <div class="chart-container h-96 md:h-[500px] max-w-2xl">
+                    <canvas id="premierLeagueChart"></canvas>
+                </div>
+                 <p class="text-center text-gray-500 mt-4 italic">A visual comparison of the core philosophies of the leading original content providers.</p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#003d5b]">The Winning Formula: A Hybrid Strategy</h2>
+            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">No single test series is perfect. The optimal approach is to build a custom "stack" of resources, combining the best free PYQ simulators with a paid series that targets your specific goal—be it conceptual mastery or competitive benchmarking.</p>
+            
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="flex flex-col items-center">
+                    <div class="flowchart-node border-[#00A6ED] bg-blue-50 w-full md:w-1/2">
+                        <h4 class="font-bold text-lg">FOUNDATION (FREE)</h4>
+                        <p>Use <strong class="text-[#003d5b]">PracticePaper.in</strong> for topic-wise PYQ solving & <strong class="text-[#003d5b]">GeeksforGeeks</strong> for full-length PYQ mocks.</p>
+                    </div>
+                    <div class="h-12 w-0.5 bg-gray-400 relative">
+                         <div class="flowchart-arrow bottom-0"></div>
+                    </div>
+
+                    <div class="w-full flex flex-col md:flex-row justify-center items-stretch gap-8">
+                        <div class="w-full h-0.5 md:h-auto md:w-0.5 bg-gray-400 hidden md:block"></div>
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="flowchart-node border-[#7FB800] bg-green-50 w-full">
+                                <h4 class="font-bold text-lg">MODEL A: The Balanced Approach</h4>
+                                <p class="mb-2">Goal: Realistic Rank Prediction</p>
+                                <div class="flowchart-arrow bottom-[-3rem] md:hidden"></div>
+                            </div>
+                            <div class="h-12 w-0.5 bg-gray-400 relative md:block hidden">
+                                <div class="flowchart-arrow bottom-0"></div>
+                            </div>
+                            <div class="mt-12 md:mt-0 flowchart-node border-[#7FB800] bg-green-50 w-full">
+                                <h4 class="font-bold text-lg">INVESTMENT (PAID)</h4>
+                                <p>Purchase <strong class="text-[#003d5b]">MADE EASY</strong> test series for access to the most accurate All-India Rank prediction.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1 flex flex-col items-center">
+                            <div class="mt-12 md:mt-0 flowchart-node border-[#F6511D] bg-orange-50 w-full">
+                                <h4 class="font-bold text-lg">MODEL B: The Challenger Approach</h4>
+                                <p class="mb-2">Goal: Deep Conceptual Strength</p>
+                                <div class="flowchart-arrow bottom-[-3rem] md:hidden"></div>
+                            </div>
+                            <div class="h-12 w-0.5 bg-gray-400 relative md:block hidden">
+                                <div class="flowchart-arrow bottom-0"></div>
+                            </div>
+                            <div class="mt-12 md:mt-0 flowchart-node border-[#F6511D] bg-orange-50 w-full">
+                                <h4 class="font-bold text-lg">INVESTMENT (PAID)</h4>
+                                <p>Purchase <strong class="text-[#003d5b]">GO Classes</strong> test series to tackle tough, original problems and build true mastery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#003d5b]">Final Recommendations & Verdict</h2>
+            <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">Your choice of a premium test series should align with your personal preparation philosophy. Here's our final verdict based on different aspirant profiles.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-[#F6511D]">
+                    <h3 class="text-xl font-bold text-[#F6511D] mb-2">For the Concept-Focused</h3>
+                    <p class="text-gray-600">Choose <strong class="text-gray-800">GO Classes</strong>. Its challenging questions are the best for building deep subject mastery and preparing for difficult, unconventional papers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-[#7FB800]">
+                    <h3 class="text-xl font-bold text-[#7FB800] mb-2">For the Rank-Conscious</h3>
+                    <p class="text-gray-600">Invest in <strong class="text-gray-800">MADE EASY</strong>. Its massive user base gives the most accurate AIR prediction, a crucial metric for competitive gauging. Be mindful of repeated questions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-8 border-[#00A6ED]">
+                    <h3 class="text-xl font-bold text-[#00A6ED] mb-2">For the Budget-Conscious</h3>
+                    <p class="text-gray-600">A top-tier preparation is possible for <strong class="text-gray-800">FREE</strong>. Use <strong class="text-gray-800">PracticePaper.in</strong> for topic-wise PYQs and the <strong class="text-gray-800">GeeksforGeeks</strong> series for a full suite of mocks.</p>
+                </div>
+            </div>
+            <div class="mt-8 bg-red-100 border-l-8 border-red-500 text-red-700 p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold mb-2">A Word of Caution</h3>
+                <p>Based on overwhelmingly negative community feedback for its CSE test series, aspirants are strongly advised to <strong class="text-red-900">AVOID the ACE Engineering Academy</strong> test series, which is widely cited for poor quality and irrelevant questions.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center p-4 mt-12 text-gray-500 text-sm">
+        <p>Infographic generated based on the "Comprehensive Market Analysis of GATE CSE Test Series" report.</p>
+        <p>Visualizations created using Chart.js and Tailwind CSS. No SVG or Mermaid JS was used in this output.</p>
+    </footer>
+
+    <script>
+        const tooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+        
+        const wrapLabel = (label, maxLength = 16) => {
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const pyqCtx = document.getElementById('pyqTestsChart').getContext('2d');
+        const pyqLabels = ['GeeksforGeeks', 'Unacademy', 'PracticePaper.in', 'Testbook'];
+        new Chart(pyqCtx, {
+            type: 'bar',
+            data: {
+                labels: pyqLabels.map(label => wrapLabel(label)),
+                datasets: [{
+                    label: 'Approx. No. of PYQ Tests/Quizzes',
+                    data: [60, 13, 50, 15],
+                    backgroundColor: ['#00A6ED', '#7FB800', '#FFB400', '#F6511D'],
+                    borderColor: ['#008bc5', '#6a9d00', '#d99a00', '#d4451a'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...tooltipCallback,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Tests'
+                        }
+                    }
+                },
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        const premierCtx = document.getElementById('premierLeagueChart').getContext('2d');
+        const premierLabels = ['Conceptual Depth', 'Rank Prediction Accuracy', 'Question Originality', 'GATE-Level Difficulty', 'Beginner Friendliness'];
+        new Chart(premierCtx, {
+            type: 'radar',
+            data: {
+                labels: premierLabels.map(label => wrapLabel(label)),
+                datasets: [
+                    {
+                        label: 'GO Classes',
+                        data: [5, 3, 5, 4, 2],
+                        fill: true,
+                        backgroundColor: 'rgba(246, 81, 29, 0.2)',
+                        borderColor: '#F6511D',
+                        pointBackgroundColor: '#F6511D',
+                    },
+                    {
+                        label: 'MADE EASY',
+                        data: [3, 5, 2, 5, 4],
+                        fill: true,
+                        backgroundColor: 'rgba(127, 184, 0, 0.2)',
+                        borderColor: '#7FB800',
+                        pointBackgroundColor: '#7FB800',
+                    },
+                    {
+                        label: 'Gate@Zeal',
+                        data: [4, 3, 4, 4, 3],
+                        fill: true,
+                        backgroundColor: 'rgba(255, 180, 0, 0.2)',
+                        borderColor: '#FFB400',
+                        pointBackgroundColor: '#FFB400',
+                    }
+                ]
+            },
+            options: {
+                ...tooltipCallback,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 5,
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            }
+                        },
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                },
+                plugins: {
+                    ...tooltipCallback.plugins,
+                    legend: {
+                        position: 'top',
+                    },
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
